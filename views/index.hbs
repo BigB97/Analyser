@@ -1,0 +1,26 @@
+<div class='search active'>
+  <form method='post' action='/search'>
+    <input
+      type='text'
+      class='input'
+      name='app'
+      placeholder='Search for apps...'
+    />
+    <button type='submit' class='btn'>
+      <i class='fas fa-search'></i>
+    </button>
+  </form>
+  <div class='row'>
+    <ul>
+      {{#each result}}
+        <li>
+          <a href='http://localhost:3000/app/{{this.appId}}'>
+            <div class='overlay'>
+              <div class='text'>{{this.title}}</div>
+            </div>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

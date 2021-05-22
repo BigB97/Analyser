@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://cdn.wallpapersafari.com/51/17/m9FBk0.png');
+  background-size: cover;
+  /* background-image: linear-gradient(90deg, #ff5fa2, #be20dd); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.search {
+  position: relative;
+  height: 50px;
+}
+
+.search .input {
+  background-color: rgba(241, 197, 227, 0.986);
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+.btn {
+  background-color: rgba(241, 197, 227, 0.986);
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 300px;
+}
+
+.search.active .btn {
+  transform: translateX(298px);
+}
+
+.row {
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  display: block;
+  left: 0;
+  height: 10px;
+  width: 100%;
+}
